@@ -2,35 +2,38 @@
 
 ### Project Overview
 
-This repository contains the API for predicting credit card approval status using a machine learning model. The model is trained using logistic regression, optimized for performance, and integrated into a Flask-based API.
+This repository contains the API for a calibration task focused on evaluating and serving multiple machine learning models through a Flask-based API. The task involves training and evaluating models, calibrating predictions, and deploying a pipeline for inference as an API endpoint.
 
 ### Key Features
-- **Model Training**: Building and training a classification model using machine learning techniques.
-- **Model Considerations**: Addressing key concerns such as bias, variance, fairness, and interpretability while training the model.
-- **API Development**: Developing an API to serve the trained model, enabling predictions based on input features.
+
+- **Model Training and Calibration**: Training and calibrating machine learning models for improved prediction accuracy and consistency.
+- **Pipeline Development**: Deploying a model pipeline as an API endpoint.
+- **API Integration**: Enabling model evaluation and predictions via a Flask-based API.
+- **Testing Automation**: Includes a Postman collection to facilitate API testing.
 
 ### Directory Structure
 ```
-├── LICENSE
-├── README.md
-├── MLEvaluation_API.postman_collection.json   # Postman collection for testing the API
-├── optimized_logistic_regression_model.pkl    # Pre-trained logistic regression model
-├── requirements.txt   # Dependencies required to run the project
-├── app.py   # Flask application hosting the API
-├── MLEvaluation_Task.ipynb  # Notebook including the model work
-├── credit_card_train.csv   # Data used for training the model  
-├── Task Description.pdf  # Task description
+├── LICENSE                                  # License details
+├── README.md                                # Project documentation
+├── requirements.txt                         # App requirements
+├── Testing_API.postman_collection.json      # Postman collection for API testing
+├── app.py                                   # Flask application for serving the API
+├── calibrated_rf_model.pkl                  # Pre-trained calibrated random forest model
+├── calibration-notebook.ipynb               # Jupyter notebook for model training and calibration
 ```
 
 ### Requirements
-To install and run the project, ensure you have the following dependencies:
+
+To install and run the project, ensure the following dependencies are available:
 - **Python 3.x**
-- **Flask** - Micro web framework for serving the API
-- **Machine Learning Libraries**:
+- Libraries:
+  - Flask
   - pandas
+  - pickle
+  - json
+  - collections (OrderedDict)
 
-These dependencies are included in the `requirements.txt` file. You can install them by running:
-
+Install all required dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
@@ -44,22 +47,23 @@ pip install -r requirements.txt
    ```
 
 2. **Install Dependencies**:
-   Ensure Python 3.x is installed. Use the following command to install the required dependencies:
+   Use the following command:
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Run the Flask App**:
-   After installing dependencies, run the app:
+   Launch the application with:
    ```bash
    python app.py
    ```
-   By default, the server will run on `http://127.0.0.1:5000/`.
+   The API will be hosted at `http://127.0.0.1:5000/`.
 
 ### API Usage
 
-- **Endpoint**: `POST /predict`
-- **Description**: Make a credit card approval prediction based on input features.
+#### Endpoint: `/predict`
+- **Method**: POST
+- **Description**: Evaluates models and returns predictions for provided meta-features.
 
 #### Request Body Example:
 ```json
@@ -207,12 +211,31 @@ pip install -r requirements.txt
 }
 ```
 
+### Notebook Details
+
+The `calibration-notebook.ipynb` includes:
+- Data preprocessing
+- Model training and calibration steps
+- Visualizations and performance evaluation metrics
+
+### Testing
+
+Use the provided `Testing_API.postman_collection.json` file to test the API in Postman. Import the collection into Postman and run the predefined tests.
+
 ### Important Notes
-- The model is designed with considerations for **performance, bias, fairness**, and **interpretability**.
-- For testing, use the Postman collection file `MLEvaluation_API.postman_collection.json` provided in the repository.
+
+- Ensure the API is running before initiating requests.
+- The model is calibrated for performance and interpretability.
+- Results are dependent on the meta-features provided in the request.
 
 ### License
-This project is licensed under the Apache-02 License. See the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the Apache-02 License. Refer to the [LICENSE](LICENSE) file for more details.
 
 ### Contact
-For any issues or questions, feel free to reach out via Teams or email.
+
+
+
+---
+
+This updated README includes the libraries you mentioned (`pickle`, `pandas`, `json`, `OrderedDict`) and aligns with your project requirements. Let me know if you need further refinements!
