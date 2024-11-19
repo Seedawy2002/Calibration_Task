@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "d54ae66f-e7e2-426a-a2a9-90da5581abde",
+		"name": "Testing_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39130783"
+	},
+	"item": [
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"0\": {\r\n        \"num_clients\": 12,\r\n        \"Sum of Instances in Clients\": 15000,\r\n        \"Max. Of Instances in Clients\": 3500,\r\n        \"Min. Of Instances in Clients\": 200,\r\n        \"Stddev of Instances in Clients\": 550,\r\n        \"Average Dataset Missing Values %\": 4.5,\r\n        \"Min Dataset Missing Values %\": 0.5,\r\n        \"Max Dataset Missing Values %\": 8.0,\r\n        \"Stddev Dataset Missing Values %\": 2.0,\r\n        \"Average Target Missing Values %\": 2.8,\r\n        \"Min Target Missing Values %\": 0.8,\r\n        \"Max Target Missing Values %\": 5.0,\r\n        \"Stddev Target Missing Values %\": 1.2,\r\n        \"No. Of Features\": 48,\r\n        \"No. Of Numerical Features\": 25,\r\n        \"No. Of Categorical Features\": 23,\r\n        \"Sampling Rate\": 0.2,\r\n        \"Average Skewness of Numerical Features\": 0.6,\r\n        \"Minimum Skewness of Numerical Features\": -0.3,\r\n        \"Maximum Skewness of Numerical Features\": 1.4,\r\n        \"Stddev Skewness of Numerical Features\": 0.3,\r\n        \"Average Kurtosis of Numerical Features\": 2.8,\r\n        \"Minimum Kurtosis of Numerical Features\": 1.5,\r\n        \"Maximum Kurtosis of Numerical Features\": 3.2,\r\n        \"Stddev Kurtosis of Numerical Features\": 0.5,\r\n        \"Avg No. of Symbols per Categorical Features\": 5.3,\r\n        \"Min. No. Of Symbols per Categorical Features\": 3,\r\n        \"Max. No. Of Symbols per Categorical Features\": 7,\r\n        \"Stddev No. Of Symbols per Categorical Features\": 1.2,\r\n        \"Avg No. Of Stationary Features\": 12.3,\r\n        \"Min No. Of Stationary Features\": 8,\r\n        \"Max No. Of Stationary Features\": 18,\r\n        \"Stddev No. Of Stationary Features\": 2.1,\r\n        \"Avg No. Of Stationary Features after 1st order\": 11.5,\r\n        \"Min No. Of Stationary Features after 1st order\": 7,\r\n        \"Max No. Of Stationary Features after 1st order\": 17,\r\n        \"Stddev No. Of Stationary Features after 1st order\": 1.9,\r\n        \"Avg No. Of Stationary Features after 2nd order\": 10.8,\r\n        \"Min No. Of Stationary Features after 2nd order\": 6,\r\n        \"Max No. Of Stationary Features after 2nd order\": 15,\r\n        \"Stddev No. Of Stationary Features after 2nd order\": 1.7,\r\n        \"Avg No. Of Significant Lags in Target\": 5.5,\r\n        \"Min No. Of Significant Lags in Target\": 2,\r\n        \"Max No. Of Significant Lags in Target\": 10,\r\n        \"Stddev No. Of Significant Lags in Target\": 1.5,\r\n        \"Avg No. Of Insignificant Lags in Target\": 3.5,\r\n        \"Max No. Of Insignificant Lags in Target\": 8,\r\n        \"Min No. Of Insignificant Lags in Target\": 1,\r\n        \"Stddev No. Of Insignificant Lags in Target\": 1.2,\r\n        \"Avg. No. Of Seasonality Components in Target\": 3.2,\r\n        \"Max No. Of Seasonality Components in Target\": 6,\r\n        \"Min No. Of Seasonality Components in Target\": 2,\r\n        \"Stddev No. Of Seasonality Components in Target\": 1.1,\r\n        \"Average Fractal Dimensionality Across Clients of Target\": 2.4,\r\n        \"Maximum Period of Seasonality Components in Target Across Clients\": 10,\r\n        \"Minimum Period of Seasonality Components in Target Across Clients\": 3,\r\n        \"Entropy of Target Stationarity\": 1.2\r\n    },\r\n    \"1\": {\r\n        \"num_clients\": 8,\r\n        \"Sum of Instances in Clients\": 13000,\r\n        \"Max. Of Instances in Clients\": 3000,\r\n        \"Min. Of Instances in Clients\": 100,\r\n        \"Stddev of Instances in Clients\": 400,\r\n        \"Average Dataset Missing Values %\": 6.0,\r\n        \"Min Dataset Missing Values %\": 1.5,\r\n        \"Max Dataset Missing Values %\": 12.0,\r\n        \"Stddev Dataset Missing Values %\": 3.0,\r\n        \"Average Target Missing Values %\": 3.2,\r\n        \"Min Target Missing Values %\": 1.0,\r\n        \"Max Target Missing Values %\": 7.0,\r\n        \"Stddev Target Missing Values %\": 2.0,\r\n        \"No. Of Features\": 52,\r\n        \"No. Of Numerical Features\": 35,\r\n        \"No. Of Categorical Features\": 17,\r\n        \"Sampling Rate\": 0.15,\r\n        \"Average Skewness of Numerical Features\": 0.4,\r\n        \"Minimum Skewness of Numerical Features\": -0.1,\r\n        \"Maximum Skewness of Numerical Features\": 1.3,\r\n        \"Stddev Skewness of Numerical Features\": 0.5,\r\n        \"Average Kurtosis of Numerical Features\": 3.0,\r\n        \"Minimum Kurtosis of Numerical Features\": 1.8,\r\n        \"Maximum Kurtosis of Numerical Features\": 3.5,\r\n        \"Stddev Kurtosis of Numerical Features\": 0.6,\r\n        \"Avg No. of Symbols per Categorical Features\": 4.5,\r\n        \"Min. No. Of Symbols per Categorical Features\": 2,\r\n        \"Max. No. Of Symbols per Categorical Features\": 6,\r\n        \"Stddev No. Of Symbols per Categorical Features\": 1.1,\r\n        \"Avg No. Of Stationary Features\": 10.5,\r\n        \"Min No. Of Stationary Features\": 6,\r\n        \"Max No. Of Stationary Features\": 14,\r\n        \"Stddev No. Of Stationary Features\": 2.0,\r\n        \"Avg No. Of Stationary Features after 1st order\": 9.8,\r\n        \"Min No. Of Stationary Features after 1st order\": 5,\r\n        \"Max No. Of Stationary Features after 1st order\": 13,\r\n        \"Stddev No. Of Stationary Features after 1st order\": 1.8,\r\n        \"Avg No. Of Stationary Features after 2nd order\": 9.2,\r\n        \"Min No. Of Stationary Features after 2nd order\": 4,\r\n        \"Max No. Of Stationary Features after 2nd order\": 12,\r\n        \"Stddev No. Of Stationary Features after 2nd order\": 1.6,\r\n        \"Avg No. Of Significant Lags in Target\": 4.8,\r\n        \"Min No. Of Significant Lags in Target\": 2,\r\n        \"Max No. Of Significant Lags in Target\": 8,\r\n        \"Stddev No. Of Significant Lags in Target\": 1.4,\r\n        \"Avg No. Of Insignificant Lags in Target\": 3.2,\r\n        \"Max No. Of Insignificant Lags in Target\": 6,\r\n        \"Min No. Of Insignificant Lags in Target\": 1,\r\n        \"Stddev No. Of Insignificant Lags in Target\": 1.0,\r\n        \"Avg. No. Of Seasonality Components in Target\": 3.0,\r\n        \"Max No. Of Seasonality Components in Target\": 5,\r\n        \"Min No. Of Seasonality Components in Target\": 1,\r\n        \"Stddev No. Of Seasonality Components in Target\": 1.0,\r\n        \"Average Fractal Dimensionality Across Clients of Target\": 2.2,\r\n        \"Maximum Period of Seasonality Components in Target Across Clients\": 9,\r\n        \"Minimum Period of Seasonality Components in Target Across Clients\": 2,\r\n        \"Entropy of Target Stationarity\": 1.1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
