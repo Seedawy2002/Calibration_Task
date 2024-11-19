@@ -234,8 +234,4 @@ This project is licensed under the Apache-02 License. Refer to the [LICENSE](LIC
 
 ### Contact
 
-
-
----
-
-This updated README includes the libraries you mentioned (`pickle`, `pandas`, `json`, `OrderedDict`) and aligns with your project requirements. Let me know if you need further refinements!
+For any issues or questions, feel free to reach out via Teams or email.
